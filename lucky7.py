@@ -48,9 +48,13 @@ while True:
     print("The dices rolled a ",diceresult)
 
     # Check if User Won
-    if (diceresult > 7 and numchoice == "1") or (diceresult < 7 and numchoice == "3") or (diceresult == 7 and numchoice == "2"):
+    if (diceresult > 7 and numchoice == "1") or (diceresult < 7 and numchoice == "3"):
         purse = purse + int(betAmt)
         print("You Won ", betAmt)
+        print('Your New Balance is ', purse)
+    elif (diceresult == 7 and numchoice == "2"):
+        purse = purse + int(betAmt) * 2
+        print("You hit the Jackpot!")
         print('Your New Balance is ', purse)
     else:
         purse = purse - int(betAmt)
@@ -59,4 +63,8 @@ while True:
     choice = input("Enter Y or N: ")
     if choice.upper() == "N":
         break
+    elif purse <= 0:
+        print("You've got no funds left. Qutting...")
+        break
+
 
