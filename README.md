@@ -23,9 +23,9 @@ python lucky7.py
 
 ## While building this project, I learned/revised :
 
-Loops
-Conditionals
-Input validation
-Random number generation
-Game logic
-Basic debugging
+- Loops
+- Conditionals
+- Input validation
+- Random number generation
+- Game logic
+- Basic debugging
